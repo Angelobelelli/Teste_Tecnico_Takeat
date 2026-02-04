@@ -1,6 +1,5 @@
 import fastify from 'fastify'
 import { classifyRoute } from "./routes/classify.route";
-import "dotenv/config"; // 👈 carrega automaticamente
 import { validateRoute } from './routes/validate.route';
 
 
