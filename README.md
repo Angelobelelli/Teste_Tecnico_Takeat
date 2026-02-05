@@ -33,15 +33,19 @@ Não foi utilizado banco de dados. O arquivo JSON fornecido no desafio é utiliz
 
 Como Executar o Projeto
 Instalar as dependências:
+```
   npm install
-  
+```  
 Executar o projeto em ambiente de desenvolvimento:
+```
   npm run dev
-  
+ ``` 
 O servidor será iniciado em:
+```
   http://localhost:3333
-
+```
 Endpoints Disponíveis:
+```
   POST /classify
   Responsável por classificar mensagens em uma categoria de intenção.
 
@@ -63,10 +67,9 @@ Endpoints Disponíveis:
     "category": "STATUS_ENTREGA",
     "confidence": 0.9
   }
+```
 
-O campo confidence representa uma estimativa simples do grau de clareza da classificação.
-Mensagens classificadas como OUTROS retornam um valor de confiança menor.
-
+```
 POST /validate
 Este endpoint utiliza o arquivo conversas-exemplo.json, fornecido no desafio, para validar o funcionamento do classificador.
 O arquivo é tratado como uma base de dados simples, permitindo comparar as categorias previstas pela IA com as categorias esperadas.
@@ -85,6 +88,7 @@ Exemplo de resposta
   },
   "errors": []
 }
+```
 
 Prompt Engineering
 O prompt utilizado foi projetado para ser simples, determinístico e independente do provedor de IA.
@@ -96,8 +100,10 @@ Foi implementado um teste automatizado simples para o endpoint /classify, utiliz
 Durante a execução dos testes, o serviço responsável pela comunicação com a IA é mockado, evitando dependência de serviços externos e consumo de APIs.
 
 Para executar os testes:
-
+```
 npm run test
+```
+
 Suporte a Múltiplos Provedores de IA
 A aplicação foi estruturada de forma a permitir a troca do provedor de IA (OpenAI, Gemini ou outros compatíveis) sem a necessidade de alterações na lógica principal do sistema, facilitando testes e futuras adaptações.
 
