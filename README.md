@@ -31,29 +31,6 @@ Não foi utilizado banco de dados. O arquivo JSON fornecido no desafio é utiliz
 
 ---
 
-## Estrutura do Projeto
-
-src/
-├─ routes/
-│ ├─ classify.route.ts
-│ └─ validate.route.ts
-├─ services/
-│ └─ classifier.service.ts
-├─ llm/
-│ ├─ llm.interface.ts
-│ ├─ llm.factory.ts
-│ ├─ openai.provider.ts
-│ └─ gemini.provider.ts
-├─ data/
-│ └─ conversas-exemplo.json
-├─ utils/
-│ └─ confidence.ts
-└─ tests/
-└─ classify.test.ts
-
-
-
-
 Como Executar o Projeto
 Instalar as dependências:
   npm install
